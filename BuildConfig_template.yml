@@ -1,0 +1,45 @@
+---
+
+# BuildConfig.yaml
+# Config file for the Day 1 Server Build - parms passed to InitDay1.sh
+# Continuouse mode will continuously re-build the server according to a schedule
+# Changing continuous to false will STOP the automatic rebuild cycle
+# Interactive mode will prompt and display to the screen
+# valid frequency value is "all","daily","weekly" or specific day time value  
+# NOTE:  All variables are preceeded by an "_" underline character
+# frequency valid values are: daily, weekly, adhoc
+#start_week_cycle_now: yes - Only valid for "weekly" frequency and when set to "yes" 
+#                             will immediately start the Server Build
+# _adhoc_build_start: yes   - When the frequency is set to "adhoc" then setting _adhoc_build_start: yes will immediately
+#                             start the build process
+#  stop_all: yes            - Will stop all processing - builds will not occur - daemon will exit 
+###############################################################################################################################
+
+mode:
+  _continuous: yes
+  _interactive: no
+  _frequency: daily
+  _displaymessages: no
+  _run_onlyonprimary: yes
+  _start_week_cycle_now: no
+  _stop_all: no
+  _adhoc_build_start: no
+servers:
+  _servernamenode1: null 
+  _servernamenode2: null
+  _primary_servername: null
+  _secondary_servername: null
+  _management_servername: njss1-ixsfd01a-intbs1.dev.fndlsb.net
+_restartmode: NULL
+_node1_ip: NULL
+_node2_ip: NULL
+_maxchunks: 115
+_template_state: co
+_bypass_onconfig_check: no
+_bypass_download: no
+_bypass_refresh: no
+_svc_acct: informix
+_Unload_DB_time_max: 5400
+_Load_DB_time_max: 12600
+_Unload_DB_reason_numrows: NULL
+_Load_DB_reason_numrows: NULL
